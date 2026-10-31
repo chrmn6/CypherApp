@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-font: "Space Grotesk", sans-serif;
+    --color-bg: #F8F6F0;
+    --color-accent: #F9E547;
+    --color-text: #263238;
+    --color-muted: #6B7280;
+    --enc-bg: #A7E8BD;
+    --dec-bg: #B9A3F5;
+    --clear-bg: #FF9B9B;
+    --border-bg: 3px solid var(--color-text);
+    --radius-sm: 6px;
+}
+
+body {
+    font-family: --primary-font;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--color-text);
+}
+
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background: var(--color-bg);
+    border: var(--border-bg);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    box-shadow: 8px 8px 0px var(--color-text);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: var(--color-accent);
+    border: var(--border-bg);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 0px var(--color-text);
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    font-family: inherit;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-text);
+    outline: none;
+    box-shadow: 2px 2px 0px var(--color-text);
+    transition: 0.25s ease;
+    border: var(--border-bg);
+    border-radius: var(--radius-sm);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+    margin-top: 20px;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: var(--color-muted);
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border: var(--border-bg);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px var(--color-text);
+    transition: 0.25s ease;
+}
+
+#enc {
+    background: var(--enc-bg);
+}
+
+#dec {
+    background: var(--dec-bg);
+}
+
+#clear {
+    background: var(--clear-bg);
+}
+
+button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--color-text);
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+#msg {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+#msg.error {
+    color: red;
+}
+
+#msg.ok {
+    color: green;
+}
+
+#result {
+    background: rgba(255, 255, 255, 0.95);
+    min-height: 100px;
+}

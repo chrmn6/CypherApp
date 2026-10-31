@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptography</title>
+    <link rel="stylesheet" href="cypher.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>Cypher Cryptic</h1>
+        <label for="key">Please input a key.</label>
+        <input id="key" type="text" autocomplete="off" />
+        <textarea
+          id="input"
+          placeholder="Type a text to encrypt or decrypt..."></textarea>
+        <div class="row">
+          <button id="enc">Encrypt</button>
+          <button id="dec">Decrypt</button>
+          <button id="clear">Clear</button>
+        </div>
+        <div id="msg"></div>
+        <label for="result">Result:</label>
+        <textarea
+          id="result"
+          placeholder="Result shows here..."
+          readonly></textarea>
+      </div>
+    </div>
+    <script src="cypher.js" defer></script>
+  </body>
+</html>
