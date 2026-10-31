@@ -18,10 +18,13 @@ body {
     font-family: --primary-font;
     background-color: rgba(255, 255, 255, 0.95);
     color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrap {
-    min-height: 100vh;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +104,25 @@ button {
     cursor: pointer;
     box-shadow: 2px 2px 0px var(--color-text);
     transition: 0.25s ease;
+}
+
+footer {
+    width: 100%;
+    background: var(--color-accent);
+    border-top: var(--border-bg);
+    padding: 18px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0px -3px 0px var(--color-text);
+}
+
+footer p {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 #enc {
