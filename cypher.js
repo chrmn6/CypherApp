@@ -106,6 +106,7 @@ document.getElementById("dec").onclick = function () {
   run("dec");
 };
 document.getElementById("clear").onclick = function () {
+  keyBox.value = "";
   inputBox.value = "";
   outputBox.value = "";
   show("");
